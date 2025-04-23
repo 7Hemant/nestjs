@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/nest-projects/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/nest-projects/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/nest-projects",
+  "projects": {
+    "file-upload": {
+      "type": "application",
+      "root": "apps/file-upload",
+      "entryFile": "main",
+      "sourceRoot": "apps/file-upload/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/file-upload/tsconfig.app.json"
+      }
+    },
+    "nest-projects": {
+      "type": "application",
+      "root": "apps/nest-projects",
+      "entryFile": "main",
+      "sourceRoot": "apps/nest-projects/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nest-projects/tsconfig.app.json"
+      }
+    },
+    "postgres": {
+      "type": "application",
+      "root": "apps/postgres",
+      "entryFile": "main",
+      "sourceRoot": "apps/postgres/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/postgres/tsconfig.app.json"
+      }
+    }
+  }
+}
