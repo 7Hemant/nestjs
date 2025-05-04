@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class FileUploadService {
+export class CrudService {
   getHello(): string {
-    return 'Hello World!';
+    return 'crud operation api in nestjs';
   }
 }
